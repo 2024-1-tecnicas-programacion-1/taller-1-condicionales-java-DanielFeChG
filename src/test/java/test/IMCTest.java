@@ -21,4 +21,16 @@ public class IMCTest {
     }
     
     // TODO: Agrega tus otros casos de prueba aquí
+    @Test
+    public void testAlto() {
+        String valorEsperado = "alto";
+        String valorActual = IMC.evaluar(90, 1.72,   50);
+        assertEquals(valorEsperado, valorActual);
+    }
+    @Test
+    public void testMedio() {
+        String valorEsperado = "medio";
+        String valorActual = IMC.evaluar(70, 1.27,   25);
+        assertEquals(valorEsperado, valorActual);
+    }
 }

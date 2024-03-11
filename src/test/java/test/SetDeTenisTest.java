@@ -21,4 +21,34 @@ public class SetDeTenisTest {
     }
     
     // TODO: Agrega tus otros casos de prueba aquí
+    @Test
+    public void testGanoA() {
+        String valorEsperado = "Ganó A";
+        String valorActual = SetDeTenis.evaluar(6, 4);
+        assertEquals(valorEsperado, valorActual);
+    }
+    @Test
+    public void testGanoB() {
+        String valorEsperado = "Ganó B";
+        String valorActual = SetDeTenis.evaluar(5, 7);
+        assertEquals(valorEsperado, valorActual);
+    }
+    @Test
+    public void testInvalido() {
+        String valorEsperado = "Inválido";
+        String valorActual = SetDeTenis.evaluar(1, 7);
+        assertEquals(valorEsperado, valorActual);
+    }
+    @Test
+    public void testUltimoJuego() {
+        String valorEsperado = "Ganó B";
+        String valorActual = SetDeTenis.evaluar(6, 7);
+        assertEquals(valorEsperado, valorActual);
+    }
+    @Test
+    public void testPruebaBorde() {
+        String valorEsperado = "Inválido";
+        String valorActual = SetDeTenis.evaluar(999999, 999997);
+        assertEquals(valorEsperado, valorActual);
+    }
 }
