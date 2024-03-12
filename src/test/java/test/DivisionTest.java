@@ -49,5 +49,11 @@ public class DivisionTest {
         String valorActual = Division.evaluar(1, 2);
         assertEquals(valorEsperado, valorActual);
     }
+    @Test
+    public void testDivisionEntreCero() {
+        String valorEsperado = "No se puede dividir entre 0";
+        String valorActual = Division.evaluar(5, 0);
+        assertEquals(valorEsperado, valorActual);
+    }
     // TODO: Agrega tus otros casos de prueba aquí
 }

@@ -49,6 +49,6 @@ public class SetDeTenisTest {
     public void testPruebaBorde() {
         String valorEsperado = "Inválido";
         String valorActual = SetDeTenis.evaluar(999999, 999997);
-        assertEquals(valorEsperado, valorActual);
+        assertEquals(valorEsperado, valorActual);  
     }
 }
